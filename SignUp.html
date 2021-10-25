@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/Login</title>
+
+    <style>
+          *{
+            font-family: roboto,sans-serif;
+        }
+ 
+
+     #firstline{
+         margin-top:5px;
+          height: 1px;
+          width:100%;
+          background-color: rgba(187, 181, 181, 0.473);
+            
+     }
+     #loginText{
+         margin-top: 26px;
+         margin-left: -300px;
+         font-size: 15px;
+         color:rgb(131, 125, 125);
+     }
+        #TopBox{
+            width: auto;
+
+            display: flex;
+            margin-top: 1px;
+            margin-bottom: 15px;
+        }
+    
+        #TopMedImg{
+            width: 180px;
+
+            /* padding-top: 1%; */
+            /* border :red 1px solid */
+            margin-left: 45px;
+            margin-top: 10px;
+            /* border: 1px solid red; */
+        }
+        #search{
+            margin-top: 9px;
+            width: 800px;
+            height: 50px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-left: 25px;
+            border-color: #EEEEEE;
+            border: 2px solid #EEEEEE;
+         
+            /* border: 1px solid red; */
+        }
+        #prescription{
+            margin-top: 12px;
+            background-color: #189ea3;
+            color: white;
+            text-decoration-color: white;
+            border-radius: 5px;
+         
+            border: 1px solid #189ea3;
+            margin-left: 10px;
+            height:45px;      
+        }
+        input[id="search"]::placeholder{
+           color:rgb(148, 141, 141);
+           padding-right: 20%;
+           font-size: 17px;
+         
+           font-family: roboto, sans;
+
+       }
+       input[id="prescription"]::placeholder{
+           color:white;
+           font-size: 17px;
+           font-family: roboto, sans;
+           text-align: center;
+
+       }
+
+        #login{
+            width: 60px;
+            height: 60px;
+            /* padding-top: 2%; */
+            /* border :red 1px solid */
+            margin-left: 13px;
+            margin-top: 5px;
+            border: none;
+            background-color: white;
+            /* border: 1px solid red; */
+        }
+        #CartImg1{
+        margin-top: 9px;
+        margin-left: 13px;
+            /* border-radius: 70px; */
+             width: 70px;
+             height: 50px;
+          
+        }
+        h2{
+            font-family: 'Nunito', sans-serif;
+            color:#4DB6AC;
+            font-size: 18px;
+        }
+        p{
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+        
+        }
+    form{
+        width: 10%;
+    }
+    /* input {
+        margin-top: 8%;
+    } */
+    #box{
+        
+        /* vertical-align: top; */
+        /* border: 1px solid black; */
+        height: 650px;
+        width: 100%;
+        margin: auto;
+        /* margin-top: 80px; */
+        background-color: #F5F5F5;
+        padding-top: 35px;     
+    }
+    #box2{
+        
+        /* display: inline-block; */
+        margin: auto;
+        background-color: white;
+        /* border: 1px solid red; */
+        height: 580px;
+        width: 950px;         
+       /* vertical-align: top; */
+       /* margin-top: 150px; */
+
+    }
+    #box3{
+       
+        display: inline-block;     
+/* border: 1px solid green; */
+height: 550px;
+width: 430px;
+margin-left: 500px;
+margin-top: -590px;
+vertical-align: top;
+
+    }
+    #box4{
+        
+        vertical-align: top;
+        /* border: 3px solid blue; */
+        height: 550px;
+        width: 380px;
+        display: inline-block;            
+    }
+    #midline{
+        
+        display: inline-block;
+        border: 1px solid rgba(128, 128, 128, 0.178);
+        height: 580px;
+        background-color: rgba(128, 128, 128, 0.178);
+        margin-left: 50px;
+     
+    }
+    form> input{
+        border-radius: 5px;
+        border-color: #f5f5f5a6;
+        padding: 12px;
+        margin: 10px 0;
+        width: 900%;
+        border: 1.5px solid #c2bbbbd3;
+
+    } 
+    #img{
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+    #signup{
+        background-color: #189ea3;
+        width: 384px;
+        height: 46px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+        margin-top: px;
+        border: 1px solid #189ea3;
+    }
+    #signupText{
+        /* background-color: #26A69A; */
+        width: 384px;
+        height: 20px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+        /* color: white; */
+        border-radius: 5px;
+    }
+    span{
+        color: #009688;
+    }
+    #loginText{
+        width: 384px;
+        height: 20px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+        /* color: white; */
+        border-radius: 5px;
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+    <div id = "TopBox">
+        <img id = "TopMedImg" src="https://mednear.com/assets/web/images/logo-big.svg" alt="">
+
+       <input type="text" id = "search" placeholder="Search For your Medicines/Health Products" img src="data:image/png;base64,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" />
+
+       <input type="text" id = "prescription" placeholder="Upload Prescription"  >
+    
+       <img id = "login" src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt=""> <span id="loginText">Login/Signup</span></button>
+  
+     <img id = "CartImg1" src="https://media.istockphoto.com/photos/shopping-cart-vector-art-closeup-view-picture-id1251362621?b=1&k=20&m=1251362621&s=170667a&w=0&h=dRxDVhO60mUXTb3g5N5EFizNRm8Sq7xDKdmyeBeZTXQ="/>
+        </span>
+    </div>
+    <div id = "firstline">
+        
+    </div>
+    <div id = "box">
+        
+     
+       <div id = box2> 
+       
+    
+        <div> 
+
+        <div id ="box4">
+
+            <img id = "img" src ="https://mednear.com/assets/web/images/others/mn-register-banner.jpg" />
+            </div>
+             
+         
+            <div id = "midline">
+                
+        
+            </div>
+        <div id = "box3"> 
+
+       
+        
+        
+    <h2> Sign Up</h2>
+    <p> Signup now & refer to get ₹ 50 MINCASH. We don't share your personal details with anyone.</p>
+<form onsubmit="signup(event)" id="myForm" action ="" > 
+<input type = "text" id = "name" placeholder = "Name"/>
+<input type = "number" id = "number" placeholder = "Mobile Number"/>
+
+<input type = "text" id = "email" placeholder = "Email"/>
+
+
+
+<input type = "password" id = "setPassword" placeholder = "Set Password"/>
+<input type = "password" id = "confirmPassword" placeholder = "Confirm Password"/>
+<p id="signupText"> By signing up, you agree to our <span>Terms and Conditions</span></p>
+<button type="submit" id ="signup"> SIGN UP </button>
+<p id="loginText"> Existing user? <span>Login </span></p>
+</div>
+</div>
+    </div>
+         </div>  
+            
+
+</form>
+    
+</body>
+</html>
+
+<script>
+
+function signup(e){
+    e.preventDefault();
+
+    let myForm = document.getElementById("myForm");
+
+    let name = myForm.name.value;
+
+    let number = myForm.number.value;
+    
+    let email = myForm.email.value;
+    
+    let setPassword = myForm.setPassword.value;
+
+    let confirmPassword = myForm.confirmPassword.value;
+
+    console.log("data;", name, number, email, setPassword, confirmPassword );
+    
+    if ( localStorage.getItem("users") === null){
+        localStorage.setItem("users", JSON.stringify([]))
+    }
+
+    let user={
+        name,
+        number,
+        email,
+        setPassword,
+        confirmPassword, 
+        
+    }
+
+    let arr = JSON.parse(localStorage.getItem("users"))
+
+    arr.push(user)
+
+
+    localStorage.setItem("users",  JSON.stringify(arr));
+
+}
+
+
+</script>
